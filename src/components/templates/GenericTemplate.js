@@ -82,7 +82,7 @@ const GenericTemplate = ({ children, title }) => {
               noWrap
               className={classes.title}
             >
-              Fukuoka-Tec-Map
+              Fukuoka Tec Map
             </Typography>
           </Toolbar>
         </AppBar>
