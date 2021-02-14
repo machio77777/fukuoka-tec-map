@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <Router>
       <Switch>
-        <Route path="/" component={HomePage} exact />
+        <Route path="/fukuoka-tec-map" component={HomePage} exact />
       </Switch>
     </Router>
     );
