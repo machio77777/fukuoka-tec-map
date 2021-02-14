@@ -7,8 +7,8 @@ export default class LeafletMap extends Component {
 
   render() {
 
-    // 西鉄天神駅
-    const center = [33.588689, 130.399967];
+    // 福岡市役所
+    const center = [33.590243, 130.401786];
 
     // 福岡に本社・支社を持つ企業リスト
     const companys = show();
