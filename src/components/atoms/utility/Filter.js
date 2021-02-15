@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Filter extends Component {
-
-  render() {
-    return (
-      <div>
-        <p>準備中</p>
-      </div>
-    )
-  }
+const Filter = () => {
+  return (
+    <div>
+      <p>準備中</p>
+    </div>
+  )
 }
+
+export default Filter
