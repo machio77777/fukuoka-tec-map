@@ -16,7 +16,21 @@ import 'leaflet/dist/leaflet.css';
 Leaflet.Icon.Default.imagePath = '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/'
 
 const useStyles = makeStyles((theme) => ({
+  paper: {
+    padding: theme.spacing(1),
+    paddingLeft: theme.spacing(2),
+    display: 'flex',
+    overflow: 'auto',
+    flexDirection: 'column',
+  },
   mapPaper: {
+    display: 'flex',
+    overflow: 'auto',
+    flexDirection: 'column',
+  },
+  searchPaper: {
+    padding: theme.spacing(2),
+    paddingLeft: theme.spacing(2),
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
@@ -27,15 +41,8 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'auto',
     flexDirection: 'column',
   },
-  paper: {
-    padding: theme.spacing(1),
-    paddingLeft: theme.spacing(2),
-    display: 'flex',
-    overflow: 'auto',
-    flexDirection: 'column',
-  },
   fixedHeightHead: {
-    height: 135,
+    height: 140,
   },
   fixedHeightMap: {
     height: 700,
@@ -46,6 +53,7 @@ const HomePage = () => {
 
   const classes = useStyles();
   const fixedHeightPaperHead = clsx(classes.paper, classes.fixedHeightHead);
+  const fixedHeightPaperSearch = clsx(classes.searchPaper, classes.fixedHeightHead);
   const fixedHeightPaperCompany = clsx(classes.companyPaper, classes.fixedHeightMap);
   const fixedHeightPaperMap = clsx(classes.mapPaper, classes.fixedHeightMap);
 
@@ -59,16 +67,11 @@ const HomePage = () => {
             </Paper>
           </Grid>
           <Grid item xs={12} md={6} lg={6}>
-            <Paper className={fixedHeightPaperHead}>
+            <Paper className={fixedHeightPaperSearch}>
               <Filter />
             </Paper>
           </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <Paper className={fixedHeightPaperCompany}>
-              <Company />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={8} lg={8}>
+          <Grid item xs={12} md={12} lg={12}>
             <Paper className={fixedHeightPaperMap}>
               <LeafletMap />
             </Paper>
