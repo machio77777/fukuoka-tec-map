@@ -1,8 +1,19 @@
 
-const CATEGORY_SIER = 'sier';
-const CATEGORY_JISHA_SERVICE = 'jisha_service';
-const CATEGORY_CONSULTING = 'consulting';
-const CATEGORY_ETC = 'etc';
+// 共通定数
+export const CATEGORY_ALL = 'all';
+export const CATEGORY_SIER = 'sier';
+export const CATEGORY_JISHA_SERVICE = 'jisha_service';
+export const CATEGORY_CONSULTING = 'consulting';
+export const CATEGORY_ETC = 'etc';
+
+// 企業一覧
+export function show() {
+  return createCompanys();
+}
+// 登録企業件数
+export function count() {
+  return createCompanys().length;
+}
 
 function createData(
   id,         // ID
@@ -12,11 +23,7 @@ function createData(
   latitude,   // 経度
   category    // カテゴリ（自社サービス | SIer | コンサル | その他）
 ) { return { 
-  id: id,
-  name: name, 
-  url: url, 
-  idx: [longitude, latitude],
-  category: category
+  id: id, name: name, url: url, idx: [longitude, latitude], category: category
 };};
 
 function createCompanys() {
@@ -45,12 +52,4 @@ function createCompanys() {
     createData(22, 'Gigi', 'https://www.gigi.tokyo/', 33.589162, 130.395307, CATEGORY_JISHA_SERVICE),
     createData(23, 'シード･コーポレーション', 'https://seed24.jp/', 33.589162, 130.395307, CATEGORY_JISHA_SERVICE),
   ]
-}
-
-export function show() {
-  return createCompanys();
-}
-
-export function count() {
-  return createCompanys().length;
 }
