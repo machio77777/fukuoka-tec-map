@@ -7,9 +7,8 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
-import SiteInfo from '../atoms/utility/SiteInfo';
-import Filter from '../atoms/utility/Filter';
-import Company from '../atoms/utility/Company';
+import SiteInfo from '../atoms/map/SiteInfo';
+import Filter from '../atoms/map/Filter';
 import LeafletMap from '../atoms/map/LeafletMap';
 
 import 'leaflet/dist/leaflet.css';
@@ -35,12 +34,6 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'auto',
     flexDirection: 'column',
   },
-  companyPaper: {
-    padding: theme.spacing(2),
-    display: 'flex',
-    overflow: 'auto',
-    flexDirection: 'column',
-  },
   fixedHeightHead: {
     height: 140,
   },
@@ -49,38 +42,36 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const HomePage = () => {
+const HomePage = () =>  {
+  
+    const classes = useStyles();
+    const fixedHeightPaperHead = clsx(classes.paper, classes.fixedHeightHead);
+    const fixedHeightPaperSearch = clsx(classes.searchPaper, classes.fixedHeightHead);
+    const fixedHeightPaperMap = clsx(classes.mapPaper, classes.fixedHeightMap);
 
-  const classes = useStyles();
-  const fixedHeightPaperHead = clsx(classes.paper, classes.fixedHeightHead);
-  const fixedHeightPaperSearch = clsx(classes.searchPaper, classes.fixedHeightHead);
-  const fixedHeightPaperCompany = clsx(classes.companyPaper, classes.fixedHeightMap);
-  const fixedHeightPaperMap = clsx(classes.mapPaper, classes.fixedHeightMap);
-
-  return (
-    <GenericTemplate title="">
-      <Container maxWidth="lg">
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6} lg={6}>
-            <Paper className={fixedHeightPaperHead}>
-              <SiteInfo />
-            </Paper>
+    return (
+      <GenericTemplate title="">
+        <Container maxWidth="lg">
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6} lg={6}>
+              <Paper className={fixedHeightPaperHead}>
+                <SiteInfo />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <Paper className={fixedHeightPaperSearch}>
+                <Filter />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={12} lg={12}>
+              <Paper className={fixedHeightPaperMap}>
+                <LeafletMap />
+              </Paper>
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={6} lg={6}>
-            <Paper className={fixedHeightPaperSearch}>
-              <Filter />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={12} lg={12}>
-            <Paper className={fixedHeightPaperMap}>
-              <LeafletMap />
-            </Paper>
-          </Grid>
-        </Grid>
-      </Container>
-    </GenericTemplate>
-  )
+        </Container>
+      </GenericTemplate>
+    )
 };
 
 export default HomePage;
-

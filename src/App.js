@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 
 import HomePage from "./components/pages/HomePage";
 
 const ROUTER_BASENAME = process.env.NODE_ENV === 'development' ? '/' : '/fukuoka-tec-map';
 
-export default class App extends Component {
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
@@ -18,3 +23,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default connect()(App);
