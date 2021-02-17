@@ -6,7 +6,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
-import { CATEGORY_ALL, CATEGORY_SIER, CATEGORY_JISHA_SERVICE, CATEGORY_CONSULTING, CATEGORY_ETC } from '../json/company';
+import { CATEGORY_ALL, CATEGORY_SIER, CATEGORY_JISHA_SERVICE, CATEGORY_CONSULTING, CATEGORY_MAKER, CATEGORY_GAME, CATEGORY_ETC } from '../json/company';
 import { find } from '../../Store';
 
 class Filter extends Component {
@@ -14,7 +14,7 @@ class Filter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedValue : 'all'
+      selectedValue : CATEGORY_ALL
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -44,6 +44,14 @@ class Filter extends Component {
               checked={this.state.selectedValue === CATEGORY_SIER}
               onChange={this.handleChange}
             />} label="SIer" />
+            <FormControlLabel value={CATEGORY_MAKER} control={<Radio
+              checked={this.state.selectedValue === CATEGORY_MAKER}
+              onChange={this.handleChange}
+            />} label="メーカー系" />
+            <FormControlLabel value={CATEGORY_GAME} control={<Radio
+              checked={this.state.selectedValue === CATEGORY_GAME}
+              onChange={this.handleChange}
+            />} label="ゲーム系" />
             <FormControlLabel value={CATEGORY_CONSULTING} control={<Radio
               checked={this.state.selectedValue === CATEGORY_CONSULTING}
               onChange={this.handleChange}

@@ -4,6 +4,8 @@ export const CATEGORY_ALL = 'all';
 export const CATEGORY_SIER = 'sier';
 export const CATEGORY_JISHA_SERVICE = 'jisha_service';
 export const CATEGORY_CONSULTING = 'consulting';
+export const CATEGORY_MAKER = 'maker';
+export const CATEGORY_GAME = 'game'
 export const CATEGORY_ETC = 'etc';
 
 // 企業一覧
@@ -38,7 +40,7 @@ function createCompanys() {
     createData(8, 'さくらインターネット', 'https://www.sakura.ad.jp/corporate/', 33.588544, 130.389413, CATEGORY_JISHA_SERVICE),
     createData(9, 'クラウドエース', 'https://www.cloud-ace.jp/', 33.587974, 130.423059, CATEGORY_SIER),
     createData(10, 'ラック', 'https://www.lac.co.jp/', 33.588089, 130.416331, CATEGORY_SIER),
-    createData(11, 'レベルファイブ', 'https://www.level5.co.jp/index.php', 33.582426, 130.400831, CATEGORY_ETC),
+    createData(11, 'レベルファイブ', 'https://www.level5.co.jp/index.php', 33.582426, 130.400831, CATEGORY_GAME),
     createData(12, 'クラスメソッド', 'https://classmethod.jp/', 33.590233, 130.424018, CATEGORY_SIER),
     createData(13, 'チームラボ', 'https://www.team-lab.com/', 33.588409, 130.404367, CATEGORY_SIER),
     createData(14, 'ヤマップ', 'https://corporate.yamap.co.jp/', 33.597227, 130.408528, CATEGORY_JISHA_SERVICE),
@@ -51,5 +53,23 @@ function createCompanys() {
     createData(21, 'Braveridge', 'https://www.braveridge.com/', 33.576393, 130.253079, CATEGORY_ETC),
     createData(22, 'Gigi', 'https://www.gigi.tokyo/', 33.589162, 130.395307, CATEGORY_JISHA_SERVICE),
     createData(23, 'シード･コーポレーション', 'https://seed24.jp/', 33.589162, 130.395307, CATEGORY_JISHA_SERVICE),
+    createData(24, 'サイバーコネクトツー', 'http://www.cc2.co.jp/', 33.593468, 130.415998, CATEGORY_GAME),
+    createData(25, 'ガンバリオン', 'https://www.ganbarion.co.jp/', 33.581914, 130.40291, CATEGORY_GAME),
+    createData(26, 'アカツキ福岡', 'https://fukuoka.aktsk.jp/', 33.582702, 130.392294, CATEGORY_GAME),
+    createData(27, 'システムソフト・ベータ', 'http://www.ss-beta.co.jp/index.html', 33.594215, 130.405297, CATEGORY_GAME),
+    createData(28, 'フロム・ソフトウェア', 'https://www.fromsoftware.jp/jp/', 33.598218, 130.406425, CATEGORY_GAME),
+    createData(29, 'KLab', 'https://www.klab.com/jp/', 33.595835, 130.395745, CATEGORY_GAME),
+    createData(30, 'クロスゲームズ', 'https://www.cross-games.jp/', 33.589864, 130.39053, CATEGORY_GAME),
+    createData(31, 'ベガコーポレーション', 'https://www.vega-c.com/', 33.591981, 130.4111, CATEGORY_JISHA_SERVICE),
+    createData(32, 'エクシーズ', 'https://www.xseeds.co.jp/', 33.59609, 130.417163, CATEGORY_ETC),
+    createData(33, 'アソウ・アルファ', 'https://alpha.ahc-net.co.jp/', 33.590695, 130.397278, CATEGORY_ETC),
+    createData(34, '富士通九州システムズ', 'https://www.fujitsu.com/jp/group/kyushu/', 33.58904, 130.430261, CATEGORY_MAKER),
+    createData(35, 'メディアファイブ', 'http://www.media5.co.jp/', 33.582375, 130.400854, CATEGORY_ETC),
+    createData(36, 'シティアスコム', 'https://www.city.co.jp/', 33.59243, 130.354117, CATEGORY_SIER),
+    createData(37, 'ディーゼロ', 'https://www.d-zero.co.jp/', 33.582903, 130.399302, CATEGORY_ETC),
+    createData(38, '九州NSソリューションズ', 'https://www.nssol.nipponsteel.com/kyushu/', 33.589971, 130.41768, CATEGORY_MAKER),
+    createData(39, '富士ソフト', 'https://www.fsi.co.jp/', 33.581911, 130.424611, CATEGORY_SIER),
+    createData(40, 'Sansan', 'https://jp.corp-sansan.com/', 33.589162, 130.395307, CATEGORY_JISHA_SERVICE),
+    createData(41, 'サイバーコム', 'https://www.cy-com.co.jp/', 33.59466, 130.402738, CATEGORY_SIER),
   ]
 }
