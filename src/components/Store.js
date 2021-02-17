@@ -23,7 +23,7 @@ function viewReducer(state, action) {
     company : []
   }
 }
-// 企業検索のレデュース処理
+// カテゴリ検索のレデュース処理
 function findReducer(state, action) {
 
   let key = action.find;

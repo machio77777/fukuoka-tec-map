@@ -38,16 +38,16 @@ class Filter extends Component {
               checked={this.state.selectedValue === 'all'}
               onChange={this.handleChange}
             />} label="ALL" />
-            <FormControlLabel value="jisyaservice" control={<Radio
-              checked={this.state.selectedValue === 'jisyaservice'}
+            <FormControlLabel value="jisha_service" control={<Radio
+              checked={this.state.selectedValue === 'jisha_service'}
               onChange={this.handleChange}
             />} label="自社サービス" />
             <FormControlLabel value="sier" control={<Radio
               checked={this.state.selectedValue === 'sier'}
               onChange={this.handleChange}
             />} label="SIer" />
-            <FormControlLabel value="consultant" control={<Radio
-              checked={this.state.selectedValue === 'consultant'}
+            <FormControlLabel value="consulting" control={<Radio
+              checked={this.state.selectedValue === 'consulting'}
               onChange={this.handleChange}
             />} label="コンサル" />
             <FormControlLabel value="etc" control={<Radio
