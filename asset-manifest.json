@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/fukuoka-tec-map/static/css/main.ba46da9e.chunk.css",
-    "main.js": "/fukuoka-tec-map/static/js/main.f2589f35.chunk.js",
-    "main.js.map": "/fukuoka-tec-map/static/js/main.f2589f35.chunk.js.map",
+    "main.js": "/fukuoka-tec-map/static/js/main.7207adb6.chunk.js",
+    "main.js.map": "/fukuoka-tec-map/static/js/main.7207adb6.chunk.js.map",
     "runtime-main.js": "/fukuoka-tec-map/static/js/runtime-main.9d147f6f.js",
     "runtime-main.js.map": "/fukuoka-tec-map/static/js/runtime-main.9d147f6f.js.map",
     "static/css/2.3d0b8d2d.chunk.css": "/fukuoka-tec-map/static/css/2.3d0b8d2d.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.3d0b8d2d.chunk.css",
     "static/js/2.2d751d8b.chunk.js",
     "static/css/main.ba46da9e.chunk.css",
-    "static/js/main.f2589f35.chunk.js"
+    "static/js/main.7207adb6.chunk.js"
   ]
 }
